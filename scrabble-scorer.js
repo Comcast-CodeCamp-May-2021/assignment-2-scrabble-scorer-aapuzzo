@@ -122,9 +122,10 @@ function transform(oldPointStructure) {
   for (let key in oldPointStructure) {
     // console.log(key, oldPointStructure[key]);    
     for(i = 0; i < oldPointStructure[key].length; i++) {
-      pointStructure[oldPointStructure[key][i]] = Number(key)
+      pointStructure[oldPointStructure[key][i].toLowerCase()] = Number(key)
     }
   }
+  console.log(pointStructure)
   return pointStructure;
 }
 
